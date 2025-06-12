@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devsnippr</title>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+
+       <link rel="stylesheet" href="assets/styles/main.css">  
+       <script src="js/link-support.js" defer></script>
+       <script src="js/theme-switcher.js" defer></script>
+    <script src="js/stats-counter.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1 class="logo">Devsnippr</h1>
+            </div>
+            <ul class="nav-menu">
+                <li style="--i: 0"><a href="#home" class="nav-link">Home</a></li>
+                <li style="--i: 1"><a href="#snippets" class="nav-link">Code Snippets</a></li>
+                <li style="--i: 2"><a href="#projects" class="nav-link">Projects</a></li>
+                <li style="--i: 3"><a href="#about" class="nav-link">About</a></li>
+                <li class="theme-toggle-li" style="--i: 4">
+                  <button class="btn btn-secondary" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+                    <span class="theme-toggle-icon sun-icon" aria-hidden="true">☀️</span>
+                    <span class="theme-toggle-icon moon-icon" aria-hidden="true">🌙</span>
+                  </button>
+                </li>
+            </ul>
+            <button class="burger" id="burger-menu" aria-label="Open navigation" title="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Welcome to My Code Collection</h2>
+                <p class="hero-description">
+                    A curated collection of code snippets, utilities, and projects. 
+                    Explore, learn, and get inspired by various programming solutions.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Code Snippets</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Snippets Section -->
+ <section id="snippets" class="section">
+    <div class="container">
+        <h2 class="section-title">Featured Code Snippets</h2>
+        <div class="filter-tabs">
+            <div class="search-wrapper">
+                <input type="text" id="snippet-search" placeholder="Search snippets..." class="search-input">
+            </div>
+            <button class="tab-btn" data-filter="javascript">JavaScript</button>
+            <button class="tab-btn" data-filter="python">Python</button>
+            <button class="tab-btn" data-filter="css">CSS</button>
+            <button class="tab-btn" data-filter="html">HTML</button>
+        </div>
+        <!-- Snippets will be dynamically loaded here -->
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">COMING SOON</h2>
+            <div class="svg"><img src="assets/svg/Faking It Cat Sticker by Bubble Punk.gif" alt=""></div>
+            <!-- Placeholder for projects --
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">COMING</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">React Game Hub</h3>
+                        <p class="project-description">A collection of classic games built with React and Canvas API</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Canvas</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Code</a>
+                            <a href="#" class="btn btn-small btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Visualizer</h3>
+                        <p class="project-description">Interactive data visualization tool with multiple chart types</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Code</a>
+                            <a href="#" class="btn btn-small btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">SOON</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CLI Utilities</h3>
+                        <p class="project-description">Collection of command-line tools for developers</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">View Code</a>
+                            <a href="#" class="btn btn-small btn-secondary">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <--About Section-->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About This Repository</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Welcome to my personal code sharing space! This website serves as a curated collection of code snippets, utilities, and projects that I've developed over time.</p>
+                        <p>Whether you're looking for quick solutions, learning new techniques, or just browsing for inspiration, you'll find a variety of code examples across different programming languages and frameworks.</p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon"></span>
+                                <span>Easy search and filtering</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon"></span>
+                                <span>One-click copy to clipboard</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon"></span>
+                                <span>Responsive design for all devices</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon"></span>
+                                <span>Dark/Light theme support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <h3>Quick Stats</h3>
+                        <div class="stats-list">
+                            <div class="stat-item">
+                                <strong>Languages:</strong> JavaScript, Python, CSS, HTML, TypeScript, React, Node.js, PHP
+                            </div>
+                            <div class="stat-item">
+                                <strong>Categories:</strong> Utilities, Algorithms, UI Components, APIs, Tools
+                            </div>
+                            <div class="stat-item">
+                                <strong>Updated:</strong> Regularly maintained and expanded
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Devsnippr is Open Source</h3>
+                    <p>All codes/projects here are free and open source. If you've used any of these projects in your work or learned something new, you can support me to create more. </p>
+                </div>
+                <div class="footer-section">
+                    <h4>☕ Buy Me a Coffee</h4>
+                    <ul class="footer-links">
+            <li><a href="#" data-payment="Trust Wallet">Trust Wallet</a></li>
+            <li><a href="#" data-payment="Zain Cash">Zain Cash</a></li>
+            <li><a href="#" data-payment="Super QI">Super QI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/mrtadha-adil-585889232/" class="social-link">LinkedIn</a>
+                        <a href="https://t.me/Methuos" class="social-link">Telegram</a>
+                    </div>
+                </div>
+            </div>
+              
+
+            <!--footer-->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Devsnippr By
+  <a href="https://www.instagram.com/methuos/" class="icon-btn" id="add-code-btn" aria-label="Instagram profile" title="Instagram profile" target="_blank" rel="noopener">
+    <img src="assets/icons/icon-boss.png" alt="profile"/>
+  </a>
+</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Payment Popup Overlay -->
+    <div id="paymentPopup" class="payment-popup">
+        <div class="popup-content">
+            <button id="closePopup" class="close-btn">&times;</button>
+            <h3> <span id="paymentMethod"></span></h3>
+            <div class="qr-container">
+                <div id="qrPlaceholder" class="qr-placeholder">
+                    <div class="qr-placeholder-text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
